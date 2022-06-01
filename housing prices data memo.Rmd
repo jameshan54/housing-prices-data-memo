@@ -20,6 +20,7 @@ library(tidyverse)
 df <- read_csv("housing.csv")
 
 colSums(is.na(df))
+summary(df)
 head(df)
 ```
 
@@ -35,7 +36,7 @@ head(df)
 1. The dataset includes median house prices for California districts derived from the 1990 census. \
 2. I obtained this dataset from Kaggle, https://www.kaggle.com/datasets/camnugent/california-housing-prices \
 3,4. There are 20640 observations and 9 predictors; longitude, latitude, housing_median_age, total_rooms, total_bedrooms, population, households, median_income, and ocean_proximity. \
-5. Yes, there are 207 missing values in total_bedrooms column. I'm going to fill in missing values with median instead of mean because it is less influenced by extreme outliers.
+5. Yes, there are 207 missing values in total_bedrooms column. I'm going to fill in missing values with median instead of mean because it is less influenced by extreme outliers. \
 
 # An overview of your research question
 1.What variable(s) are you interested in predicting? What question(s) are you interested in answering? \
@@ -45,14 +46,24 @@ head(df)
 5.Is the goal of your model descriptive, predictive, inferential, or a combination? Explain. \
 \
 
-1.
+1. I'm interested in predicting median housing prices using different predictors. \
+2. The response would be median_house_value in the dataset. Its minimum and maximum value would be 14999 and 500001 respectively. The mean value is 206856. \
+3. This question would be best answered with a regression approach because the response variable is quantitative. \
+4. I'm expecting median_income and total_rooms to be really helpful in predicting median housing prices. \
+5. My goal of the model is predictive because my aim is to predict median housing prices. \
+\
 
 # Your proposed project timeline
 1.When do you plan on having your data set loaded, beginning your exploratory data analysis, etc? \
 2.Provide a general timeline for the rest of the quarter. \
 \
 
+1,2. I changed my dataset and I have a week until the due date. I'm going to spend 3-4 hours every day and I'm going to have dataset loaded, begin my exploratory data analysis(EDA) today. \
+\
+
 # Any questions or concerns
 1.Are there any problems or difficult aspects of the project you anticipate? \
 2.Any specific questions you have for me/the instructional team?\
 \
+
+1,2. My previous data only had around 150 observations but my new dataset has 21000 observations. So, I think it's a good start. My biggest concern before starting exploratory data analysis is what variables to use to predict our response variable.
