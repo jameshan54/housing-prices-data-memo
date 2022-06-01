@@ -1,0 +1,58 @@
+---
+title: "housing prices data memo"
+author: "James(Changhwan) Han (3923257)"
+date: "5/31/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Loading libraries
+```{r, warning = FALSE}
+library(tidymodels)
+library(tidyverse)
+```
+
+# Dataset
+```{r}
+df <- read_csv("housing.csv")
+
+colSums(is.na(df))
+head(df)
+```
+
+
+# An overview of my dataset
+1.What does it include? \
+2.Where and how will you be obtaining it? Include the link and source. \
+3.About how many observations? How many predictors? \
+4.What types of variables will you be working with? \
+5.Is there any missing data? About how much? Do you have an idea for how to handle it? \
+\
+
+1. The dataset includes median house prices for California districts derived from the 1990 census. \
+2. I obtained this dataset from Kaggle, https://www.kaggle.com/datasets/camnugent/california-housing-prices \
+3,4. There are 20640 observations and 9 predictors; longitude, latitude, housing_median_age, total_rooms, total_bedrooms, population, households, median_income, and ocean_proximity. \
+5. Yes, there are 207 missing values in total_bedrooms column. I'm going to fill in missing values with median instead of mean because it is less influenced by extreme outliers.
+
+# An overview of your research question
+1.What variable(s) are you interested in predicting? What question(s) are you interested in answering? \
+2.Name your response/outcome variable(s) and briefly describe it/them. \
+3.Will these questions be best answered with a classification or regression approach? \
+4.Which predictors do you think will be especially useful? \
+5.Is the goal of your model descriptive, predictive, inferential, or a combination? Explain. \
+\
+
+1.
+
+# Your proposed project timeline
+1.When do you plan on having your data set loaded, beginning your exploratory data analysis, etc? \
+2.Provide a general timeline for the rest of the quarter. \
+\
+
+# Any questions or concerns
+1.Are there any problems or difficult aspects of the project you anticipate? \
+2.Any specific questions you have for me/the instructional team?\
+\
